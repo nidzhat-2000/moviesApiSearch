@@ -7,7 +7,7 @@ const noneImg =
 
 function Movies() {
   const { movies, loading } = useGlobalContext();
-  console.log(movies);
+  // console.log(movies);
 
   if (loading) {
     return <h2>Loading...</h2>;
@@ -17,7 +17,7 @@ function Movies() {
     return (
       <section className="movies-list">
         {movies.map(movie => {
-          console.log(movie);
+          // console.log(movie);
           const {
             Title: name,
             Poster: img,

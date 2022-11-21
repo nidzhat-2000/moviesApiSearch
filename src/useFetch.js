@@ -11,9 +11,10 @@ function useFetch(url) {
   const fetchMovies = async urlFetch => {
     const response = await fetch(urlFetch);
     const data = await response.json();
-    console.log(data);
+    // console.log(data);
     try {
       if (data.Response === 'True') {
+        console.log(data);
         setMovies(data.Search || data);
       } else {
         setError({ show: true, msg: data.Error });
